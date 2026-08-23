@@ -1,4 +1,4 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from "expo-router";
+import { DarkTheme, DefaultTheme, Stack, ThemeProvider } from "expo-router";
 import "../global.css";
 import { Text, View } from "react-native";
 import { useColorScheme } from "nativewind";
@@ -68,11 +68,12 @@ export default function RootLayout() {
         ]}
       >
         <StatusBar key={scheme} animated style={scheme === "dark" ? "light" : "dark"} />
-        <View className="flex-1 items-center justify-center bg-white">
-          <Text className="text-xl font-bold text-blue-500">
-            Welcome to Nativewind!
-          </Text>
-        </View>
+       <Stack screenOptions={{
+        headerShown:false
+       }}>
+
+        <Stack.Screen name="(public)"/>
+       </Stack>
       </View>
     </ThemeProvider>
   );
