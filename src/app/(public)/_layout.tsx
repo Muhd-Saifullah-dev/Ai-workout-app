@@ -8,6 +8,7 @@ export default function PublicLayout() {
     headerShown:false
    }}>
     <Stack.Screen name='welcome' options={{headerShown:false}}/>
+    <Stack.Screen name='sign-up' options={{headerShown:false}}/>
    </Stack>
   )
 }
